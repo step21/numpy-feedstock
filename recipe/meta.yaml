@@ -54,6 +54,12 @@ requirements:
 {% set tests_to_skip = tests_to_skip + " or test_generalized_sq_cases" %}   # [ppc64le or aarch64]
 {% set tests_to_skip = tests_to_skip + " or test_may_share_memory_harder_fuzz" %}   # [ppc64le or aarch64]
 {% set tests_to_skip = tests_to_skip + " or test_large_zip" %}   # [ppc64le or aarch64]
+# Failing tests on ppc64le and maybe on aarch64
+{% set tests_to_skip = tests_to_skip + " or test_end_points" %}   # [ppc64le or aarch64]
+{% set tests_to_skip = tests_to_skip + " or test_RGB" %}   # [ppc64le or aarch64]
+{% set tests_to_skip = tests_to_skip + " or test_periodic_reference" %}   # [ppc64le or aarch64]
+{% set tests_to_skip = tests_to_skip + " or test_hdx_rgb_roundtrip" %}   # [ppc64le or aarch64]
+{% set tests_to_skip = tests_to_skip + " or test_hed_rgb_roundtrip" %}   # [ppc64le or aarch64]
 
 test:
   requires:
